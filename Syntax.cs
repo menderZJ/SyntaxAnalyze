@@ -6,13 +6,13 @@ using System.Web;
 using System.Text.RegularExpressions;
 using System.Text;
 
-namespace Common
+namespace ModelSelectSystem.MSSCommon
 {
 
     /// <summary>
     /// Description:主要用于分析代码字符串，并分离出操作符、变量、函数、常量等单元，以对不同单元进行不同处理。带有括号（花括号、方括号和圆括号）匹配检测功能，检测结果可通过共成员Errors获得。
-    /// Author：menderZJ
-    /// Date:2020-05-10
+    /// Author：MenderZJ
+    /// Date:2020-08-13
     /// </summary>
     public class SyntaxAnalyze
     {
@@ -452,10 +452,9 @@ namespace Common
                 {
                     rs += cFun(item);
                 }
-                else
-                {
+                else {
                     rs += item.value;
-                }
+                    }
                 }
             return rs;
         }
